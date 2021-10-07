@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{7CB11D4E-7FB3-42E2-B943-93182276643C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{6A0F74F2-A016-4A6D-8EAB-E0238FBE51AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{5C78072A-4743-441C-855A-FB8E5A27D0D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +20,23 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|x64.Build.0 = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|x64.ActiveCfg = Release|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|x64.Build.0 = Release|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A0F74F2-A016-4A6D-8EAB-E0238FBE51AE} = {7CB11D4E-7FB3-42E2-B943-93182276643C}
+		{5C78072A-4743-441C-855A-FB8E5A27D0D5} = {6A0F74F2-A016-4A6D-8EAB-E0238FBE51AE}
 	EndGlobalSection
 EndGlobal
