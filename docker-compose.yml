@@ -11,6 +11,24 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+  
+  basketdb:
+    container_name: basketdb
+    image: redis:alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
 
   catalogapi:
     container_name: catalogapi
@@ -26,5 +44,20 @@ services:
     ports:
       - "8000:80"
 
+  basketapi:
+    container_name: basketapi
+    image: basketapi
+    build:
+      context: .
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CacheSettings:ConnectionString=basketdb:6379"
+    depends_on:
+      - basketdb
+    ports:
+      - "8001:80"
+
 volumes:
   mongo_data:
+  portainer_data:
