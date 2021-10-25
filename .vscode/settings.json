@@ -1,0 +1,6 @@
+{
+    "editor.defaultFormatter": "kreativ-software.csharpextensions",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    }
+}
