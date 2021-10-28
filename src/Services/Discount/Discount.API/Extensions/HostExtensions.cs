@@ -20,7 +20,7 @@ namespace Discount.API.Extensions
 
                 try
                 {
-                    logger.LogInformation("Migrating postresql database.");
+                    logger.LogInformation("Migrating postgresql database.");
 
                     using var connection = new NpgsqlConnection(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
                     connection.Open();

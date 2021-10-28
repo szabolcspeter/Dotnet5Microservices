@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj",
+                "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj",
+                "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj",
+                "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -47,12 +47,12 @@
             "dockerBuild": {
                 "tag": "dotnet5microservices:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/src/Services/Basket/Basket.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj"
+                "appProject": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj"
             }
         },
         {
@@ -63,12 +63,12 @@
             ],
             "dockerBuild": {
                 "tag": "dotnet5microservices:latest",
-                "dockerfile": "${workspaceFolder}/src/Services/Basket/Basket.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj"
+                "appProject": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj"
             }
         },
         {
@@ -79,7 +79,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj",
+                "appProject": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -92,7 +92,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/Services/Basket/Basket.API/Basket.API.csproj"
+                "appProject": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/Discount.Grpc.csproj"
             }
         }
     ]
