@@ -164,6 +164,24 @@ services:
     ports:
       - "8010:80"
 
+  shoppingaggregator:
+    container_name: shoppingaggregator
+    image: shoppingaggregator
+    build:
+      context: .
+      dockerfile: src/ApiGateways/Shopping.Aggregator/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ApiSettings:CatalogUrl=http://catalogapi"
+      - "ApiSettings:BasketUrl=http://basketapi"
+      - "ApiSettings:OrderingUrl=http://orderingapi"
+    depends_on:
+      - catalogapi
+      - basketapi
+      - orderingapi
+    ports:
+      - "8005:80"
+
 volumes:
   mongo_data:
   portainer_data:
