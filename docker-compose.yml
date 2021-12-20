@@ -182,6 +182,24 @@ services:
     ports:
       - "8005:80"
 
+  aspnetrunbasics:
+    container_name: aspnetrunbasics
+    image: aspnetrunbasics
+    build:
+      context: .
+      dockerfile: src/WebApps/AspnetRunBasics/Dockerfile
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "ApiSettings:GatewayAddress=http://ocelotapigw"
+    depends_on:
+        - ocelotapigw
+        - catalogapi
+        - basketapi
+        - discountapi
+        - orderingapi
+    ports:
+        - "8006:80"
+
 volumes:
   mongo_data:
   portainer_data:

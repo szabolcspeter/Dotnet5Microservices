@@ -47,12 +47,12 @@
             "dockerBuild": {
                 "tag": "dotnet5microservices:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Dockerfile",
+                "dockerfile": "${workspaceFolder}/src/WebApps/AspnetRunBasics/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj"
+                "appProject": "${workspaceFolder}/src/WebApps/AspnetRunBasics/AspnetRunBasics.csproj"
             }
         },
         {
@@ -63,12 +63,12 @@
             ],
             "dockerBuild": {
                 "tag": "dotnet5microservices:latest",
-                "dockerfile": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Dockerfile",
+                "dockerfile": "${workspaceFolder}/src/WebApps/AspnetRunBasics/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj"
+                "appProject": "${workspaceFolder}/src/WebApps/AspnetRunBasics/AspnetRunBasics.csproj"
             }
         },
         {
@@ -79,7 +79,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj",
+                "appProject": "${workspaceFolder}/src/WebApps/AspnetRunBasics/AspnetRunBasics.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -92,7 +92,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj"
+                "appProject": "${workspaceFolder}/src/WebApps/AspnetRunBasics/AspnetRunBasics.csproj"
             }
         }
     ]
